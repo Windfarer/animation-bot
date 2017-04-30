@@ -1,0 +1,14 @@
+# a sample deployment docker-compose.yml
+version: '2'
+services:
+  mongodb:
+    image: mongo
+  scrapy:
+    image: windfarer/animation-bot
+    environment:
+      MONGO_URI: mongodb://mongodb/db
+    command: ["scrapy", "crawl", "imdb"]
+  bot:
+    image: windfarer/animation-bot
+    environment:
+      MONGO_URI: mongodb://mongodb/db
