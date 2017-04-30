@@ -15,3 +15,5 @@ python bot.py
 ```bash
 scrapy crawl imdb
 ```
+## usage
+start the bot, login with QR Code. Send message '/random' to this bot.
